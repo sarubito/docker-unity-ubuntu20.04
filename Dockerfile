@@ -8,8 +8,8 @@ ARG TZ=Asia/Tokyo
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ ${TZ}
 
-# ENV NVIDIA_VISIBLE_DEVICES=all
-# ENV NVIDIA_DRIVER_CAPABILITIES=all
+#ENV NVIDIA_VISIBLE_DEVICES=all
+#ENV NVIDIA_DRIVER_CAPABILITIES=all
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 

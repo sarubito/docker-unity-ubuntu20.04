@@ -3,8 +3,15 @@
 version: '3.8'
 services:
   unity:
+    ## Download from docker hub
     image: sarubito2020/unity_for_ubuntu20.04:latest
+    ## build from local Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     ## gpuを使用するための設定 gpu-support https://docs.docker.com/compose/gpu-support/
+    ## ENV NVIDIA_VISIBLE_DEVICES=all
+    ## ENV NVIDIA_DRIVER_CAPABILITIES=allと同義
     deploy:
       resources:
         reservations:
